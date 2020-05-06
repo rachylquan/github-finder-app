@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Finder App</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Github Finder App</h1>
+      <form id="js-form">
+        <input id="js-gitHandle" type="text" value="rachylquan" required>
+        <input type="submit" value="Find!">
+      </form>
+    </header> 
+    <p id="js-error-message" class="error-message"></p>
+    <main class="resultsContainer hidden">
+        <h2>Repos:</h2>
+        <ul class="resultList"></ul>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
