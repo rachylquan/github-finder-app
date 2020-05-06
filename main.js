@@ -12,6 +12,8 @@ function getRepos(gitHandle) {
       } 
       else {
         $('.resultsContainer').addClass('hidden');
+        $('.errorContainer').removeClass('hidden');
+        $('#js-error-message').empty();
         throw new Error(response.statusText);
       }
       
@@ -25,7 +27,7 @@ function getRepos(gitHandle) {
 function displayResults(results) {
   // if there are previous results, remove them
   console.log('displaying results');
-  $('#js-error-message').empty();
+  $('.errorContainer').addClass('hidden');
   $('.resultList').empty();
   // add results to container for every repo
   for (let i = 0; i < results.length; i++) {
